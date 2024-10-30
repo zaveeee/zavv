@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Pesan Dariku Untukmu</title>
+    <script src="https://dekatutorial.github.io/drk/s.js"></script>
+    <link rel="stylesheet" href="https://dekatutorial.github.io/drk/s.css" />
+    <style>
+        .bottom-left {
+            position: absolute;
+            bottom: -35px; /* Adjust as needed */
+            left: 520px;   /* Adjust as needed */
+            width: 200px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .paper {
+            position: relative; /* Ensure paper-content can position children */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <div class="content animate__animated animate__bounceInDown">
+        <div class="card">
+            <div>
+                <h3>Penasaran yaa?</h3>
+            </div>
+            <img class="surat" src="https://dekatutorial.github.io/spesial_mail.png" alt="MAIL" />
+            <p>Tekan untuk membuka</p>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="paper animate__animated animate__bounceIn" id="content2">
+        </div>
+    </div>
+
+    <script>
+        var musik = "music cut.mp3";
+        var background = "Baground.jpg";
+        var ucapanSurat = "";
+        var pesanWhatsapp = "PESAN WHATSAPP";
+
+        DekaTutorial(musik, background, ucapanSurat, pesanWhatsapp);
+    </script>
+</body>
+</html>

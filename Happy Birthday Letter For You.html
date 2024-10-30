@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Pesan Dariku Untukmu</title>
+    <script src="https://dekatutorial.github.io/drk/s.js"></script>
+    <link rel="stylesheet" href="https://dekatutorial.github.io/drk/s.css" />
+    <style>
+        .bottom-left {
+            position: absolute;
+            bottom: -35px; /* Adjust as needed */
+            left: 520px;   /* Adjust as needed */
+            width: 200px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .paper {
+            position: relative; /* Ensure paper-content can position children */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <div class="content animate__animated animate__bounceInDown">
+        <div class="card">
+            <div>
+                <h3>Kalo dibuka isinya Josim aseli no hoak</h3>
+            </div>
+            <img class="surat" src="https://dekatutorial.github.io/spesial_mail.png" alt="MAIL" />
+            <p>Tekan untuk membuka</p>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="paper animate__animated animate__bounceIn" id="content2">
+            <div class="paper-content">
+                <textarea class="pesan" disabled></textarea>
+                <a href="https://wa.link/2w7lvj" target="_blank">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tetapkan ucapan surat seperti semula
+        var musik = "musik2.mp3";
+        var background = "background3.png";
+        var ucapanSurat = 
+        `Happy birthday!
+Happy sweet twenty, Mba Bethaa!! Or should I say the day of beautiful wise girl being born?? :x Nah I'm just kidding :)) I wish all the best for you, Mba Bethaa. Barakallah Fii Umrik, semoga Mba Bet selalu diberikan umur yang panjang, kesehatan yang selalu diberikan, rezeki yang melimpah, serta kemudahan di dunia maupun di akhirat, even for Mba betha herself, her family, and for everyone who is special to her, Aamiin...
+Surat ini dibuat oleh Zav, seseorang yang sangat mengagumi Mba Bethaa, meskipun selalu kalah dengan Josim A.K.A Exu Wolfenshire, Sylus, Kinnich, Himmel, Sanemi, Rin, dan masih banyak lagi (Sialan mereka >:/).
+Aku juga mau ngucapin terimakasih banyak kepada Mba Betha yang spesial di hari spesialnya ini, makasih banyak banget buat Mba Bet karena sudah menemani aku selama ini, entah mabar bareng, DC-an bareng, nemenin nugas, dan bahkan udah luangin waktu buat saya (terharu :'). Aku juga makasih banget buat Mba Betha karena udah menjadi person yang membuat pribadiku lebih baik, gara gara Mba Betha, aku bisa ngurangin bicara kotorku, nahan emosiku, dan motivasiku buat mengejar pendidikan tinggi yang kuinginkan (intinya Mba Bet really mean something to me).
+Oh iya, Aku juga ada hadiah buat Mba Betha, yaa Mba Bet udah tau sih... (Mmaaf jika tidak surprais), I hope Mba Bet menerima hadiah itu (Harus, ini pemaksaan), Kuharap Mba Bet suka yaa sama hadiahnya, maaf banget aku cuma bisa ngasih itu, and Mba Bet gaperlu mikirin buat balikin apa yang kukasih, karna aku emang sincerely mau ngasih kado ke Mba Bet.
+Sekali lagi makasih banyak yaa Mba Bet udah mau membaca suratku yang panjang dan tidak jelas ini, I hope we'll always together as a close friend.
+Kalo gitu.. sekian dari saya, apabila ada kurang lebihnya, mohon dimaafkan... Thanks and Always have a good day, Mba Bethaa!!
+`;
+        var pesanWhatsapp = "PESAN WHATSAPP";
+
+        // Panggil fungsi untuk menjalankan animasi teks
+        DekaTutorial(musik, background, ucapanSurat, pesanWhatsapp);
+
+        // Tambahkan kode untuk mempercepat animasi teks
+        // Menargetkan textarea tempat teks akan muncul
+        var textarea = document.querySelector('.pesan');
+
+        // Fungsi untuk mempercepat animasi teks
+        function animateText(text, speed) {
+            let i = 0;
+            textarea.value = ""; // Kosongkan textarea
+            function type() {
+                if (i < text.length) {
+                    textarea.value += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Kecepatan lebih cepat 3x (biasanya 150ms, sekarang 50ms)
+        var speed = 50;
+
+        // Panggil fungsi animasi teks dengan ucapanSurat yang lebih cepat
+        animateText(ucapanSurat, speed);
+    </script>
+</body>
+</html>
